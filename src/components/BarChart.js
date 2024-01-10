@@ -1,8 +1,8 @@
 import React from 'react'
-import { Line } from 'react-chartjs-2'
+import { Bar } from 'react-chartjs-2'
 import 'chart.js/auto';
 
-function LineChart() {
+function BarChart() {
 
   const data = {
     labels:['Jan', 'Feb', 'Mar', 'Apr', 'Mar'],
@@ -27,7 +27,7 @@ function LineChart() {
     plugins:{
       title:{
         display:true,
-        text:'Line Chart'
+        text:'Bar Chart'
       },
       tooltip:{
         enabled:false
@@ -52,9 +52,9 @@ function LineChart() {
   return (
     // <Line data={data}/>
     <div>
-      <Line data={data} options={options}/>
+      <Bar data={data} options={options}/>
     </div>
   )
 }
 
-export default LineChart
+export default BarChart
