@@ -1,8 +1,8 @@
 import React from 'react'
-import { Line } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2'
 import 'chart.js/auto';
 
-function LineChart() {
+function DoughnutChart() {
 
   const data = {
     labels:['Jan', 'Feb', 'Mar', 'Apr', 'Mar'],
@@ -10,15 +10,12 @@ function LineChart() {
         {
             label:'Sales for 2021 (M)',
             data : [3,2,2,1,5],
-            borderColor:['rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)'],
-            backgroundColor:['rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)'],
+            //borderColor:['rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)','rgba(54,162,235,0.2)'],
+            backgroundColor:['rgba(255,99,132,1)','rgba(255,205,86,1)','rgba(54,162,235,1)','rgba(255,159,64,1)','rgba(153,102,255,1)'],
             // pointBackgroundColor:'rgba(255,206,86,0.2)',
             // pointBorderColor:'rgba(255,206,86,0.2)'
         },
-        {
-          label:'Sales for 2019 (M)',
-          data:[1,2,3,2,4]
-        }
+        // only one dataset
     ]
   }
 
@@ -27,7 +24,7 @@ function LineChart() {
     plugins:{
       title:{
         display:true,
-        text:'Line Chart'
+        text:'Bar Chart'
       },
       tooltip:{
         enabled:false
@@ -38,23 +35,15 @@ function LineChart() {
       },
 
     },
-    scales:{ 
-      y:{
-        max:6,
-        min:0,
-        ticks:{
-          stepSize:1
-        }
-      }
-  },
+    // not scales
   }
 
   return (
     // <Line data={data}/>
     <div>
-      <Line data={data} options={options}/>
+      <Doughnut data={data} options={options}/>
     </div>
   )
 }
 
-export default LineChart
+export default DoughnutChart

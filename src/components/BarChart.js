@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 import 'chart.js/auto';
 
 function BarChart() {
@@ -27,7 +27,7 @@ function BarChart() {
     plugins:{
       title:{
         display:true,
-        text:'Bar Chart'
+        text:'Line Chart'
       },
       tooltip:{
         enabled:false
@@ -52,7 +52,7 @@ function BarChart() {
   return (
     // <Line data={data}/>
     <div>
-      <Bar data={data} options={options}/>
+      <Line data={data} options={options}/>
     </div>
   )
 }

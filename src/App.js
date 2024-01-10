@@ -1,5 +1,6 @@
 import './App.css'
 import BarChart from './components/BarChart.js';
+import DoughnutChart from './components/DoughnutChart.js';
 import LineChart from './components/LineChart.js';
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
       <LineChart />
       <br /> <br />
       <BarChart />
+      <br /> <br />
+      <DoughnutChart />
       </div>
     </div>
   );
