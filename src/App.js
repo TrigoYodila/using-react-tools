@@ -1,11 +1,12 @@
 import './App.css'
-import LineChart from './components/LineChart';
+import LineChart from './components/LineChart.js';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Test</h1>
+    <div className='App'>
+      <div className='chart'>
       <LineChart />
+      </div>
     </div>
   );
 }

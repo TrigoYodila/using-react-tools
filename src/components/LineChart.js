@@ -1,11 +1,12 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
+import 'chart.js/auto';
 
 function LineChart() {
 
   const data = {
     labels:['Jan', 'Feb', 'Mar', 'Apr', 'Mar'],
-    dataSets:[
+    datasets:[
         {
             label:'Sales for 2021 (M)',
             data : [3,2,2,1,5]
@@ -14,7 +15,10 @@ function LineChart() {
   }
 
   return (
-    <Line data={data}/>
+    // <Line data={data}/>
+    <div>
+      <Line data={data} />
+    </div>
   )
 }
 
